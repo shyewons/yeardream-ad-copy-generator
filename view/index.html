@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>광고 문구 생성기</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/script.js" defer></script>
+</head>
+<body><main>
+<header><small>AI COPY STUDIO</small><h1>상품의 특징을 광고 문구로.</h1><p>상품과 고객을 알려주면 광고 초안을 만들어드려요.</p></header>
+<div class="layout">
+<section><h2>상품 정보</h2>
+<form id="ad-form">
+<label for="product_name">상품명</label><input id="product_name" name="product_name" required maxlength="100" placeholder="데일리 텀블러">
+<label for="features">상품 특징</label><textarea id="features" name="features" required maxlength="1000" rows="4" placeholder="350ml, 스테인리스 소재, 손잡이 있음"></textarea>
+<label for="target">타깃 고객</label><input id="target" name="target" required maxlength="200" placeholder="출퇴근하는 직장인">
+<label for="channel">광고 채널</label><select id="channel" name="channel"><option>인스타그램</option><option>블로그</option><option>문자 메시지</option><option>상세 페이지</option></select>
+<label for="tone">말투</label><select id="tone" name="tone"><option>친근한 말투</option><option>전문적인 말투</option><option>감성적인 말투</option><option>재치 있는 말투</option></select>
+<button id="generate" type="submit">광고 생성하기</button>
+</form></section>
+<section id="result-panel" aria-busy="false"><h2>광고 초안</h2>
+<p id="status" role="status">상품 정보를 입력하고 광고를 생성해보세요.</p>
+<div id="loading" hidden>
+    <div class="loading-track" aria-hidden="true"><span></span></div>
+    <p id="elapsed" role="timer" aria-live="off">경과 시간 0초</p>
+</div>
+<p id="error" role="alert" hidden></p>
+<div id="result" hidden>
+<article><h3>제목 <button type="button" data-copy="headline">복사</button></h3><p id="headline"></p></article>
+<article><h3>본문 <button type="button" data-copy="body">복사</button></h3><p id="body"></p></article>
+<article><h3>CTA <button type="button" data-copy="cta">복사</button></h3><p id="cta"></p></article>
+<article><h3>해시태그 <button type="button" data-copy="hashtags">복사</button></h3><p id="hashtags"></p></article>
+</div></section>
+</div></main></body></html>

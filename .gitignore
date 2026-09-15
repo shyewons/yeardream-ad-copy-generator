@@ -1,0 +1,25 @@
+# Python 환경 및 캐시
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 로컬 설정과 자격 증명
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.codex/
+.agents/
+*.log
+
+# 로컬 작업 메모
+ad-copy-generator-codex-handoff.md
+
+# 운영체제 파일
+.DS_Store
+Thumbs.db
